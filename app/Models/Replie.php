@@ -10,11 +10,11 @@ class Replie extends Model
     use HasFactory;
     public  function likes()
     {
-        return $this->morphedByMany(Subscription::class,"Likeable");
+        return $this->morphedByMany(Subscription::class,"likeable");
     }
 
     public  function Taggs()
     {
-        return $this->morphedByMany(Tagg::class,"Likeable");
+        return $this->morphedByMany(Tagg::class,"likeable");
     }
 }

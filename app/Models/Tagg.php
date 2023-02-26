@@ -11,6 +11,6 @@ class Tagg extends Model
 
         public  function likes()
     {
-        return $this->morphedToMany(App\Models\Replie::class,"Replie");
+        return $this->morphedToMany("App\Models\Replie","Replie");
     }
 }
