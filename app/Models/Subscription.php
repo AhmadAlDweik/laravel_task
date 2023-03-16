@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphOneOrMany;
 
 class Subscription extends Model
 {
@@ -11,6 +12,6 @@ class Subscription extends Model
 
     public  function likes()
     {
-        return $this->morphedToMany("App\Models\Replie","replie");
+        return $this->MorphedToMany("App\Models\Replie","replie");
     }
 }

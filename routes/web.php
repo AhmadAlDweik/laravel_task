@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Replie;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,6 @@ Route::get('/', function () {
 
 
 Route::get("like/{id}/subscription" , function ($id){
-   $Replie = App\Models\Replie::find($id);
+   $Replie = Replie::find($id);
    return $Replie->likes;
 });
